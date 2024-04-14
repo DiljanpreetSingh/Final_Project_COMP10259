@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Common Crownfish</title>
+    <link rel="stylesheet" href="sass/contact_us_style.css">
+    <link rel="stylesheet" type="text/css" href="css/contact_us.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var endOfPage = $(document).height() - $(window).height();
+                if ($(this).scrollTop() > endOfPage - 450) { 
+                    $('.navigation').addClass('fixed-nav'); 
+                } else {
+                    $('.navigation').removeClass('fixed-nav'); 
+                }
+            });
+        });
+        
+        function validateForm() {
+            var dateRegex = /^\d{2}\/\d{2}\/\d{2}$/;
+
+            var fn = document.forms["myForm"]["Firstname"].value;
+            if (fn.length < 5) {
+                alert("Please enter at least 5 characters for first name");
+                return false;
+            }
+
+            var ln = document.forms["myForm"]["Lastname"].value;
+            if (ln.length < 5){
+                alert("Please enter at least 5 characters for last name");
+                return false;
+            }
+
+            var email = document.forms["myForm"]["Email"].value;
+            if (!email.includes("@")){
+                alert("Please enter a valid email ID");
+                return false;
+            }
+
+            var date = document.forms["myForm"]["inputDate"].value;
+            if(!dateRegex.test(date)){
+                alert('Please enter a valid date with format dd/mm/yy');
+                return false;
+            }
+
+            var phone = document.forms["myForm"]["phone"].value;
+            if (phone.length < 10){
+                alert("Please enter at least 10 digits for phone number");
+                return false;
+            }
+
+            var msg = document.forms["myForm"]["Message"].value;
+            if (msg.length < 50){
+                alert("Please enter at least 50 characters for the message");
+                return false;
+            }
+
+            return true;
+        }
+        
+        function validateEmail() {
+            let email = document.getElementById("Email").value;
+            let atSymbol = email.indexOf("@");
+            let dot = email.lastIndexOf(".");
+
+            if (
+                atSymbol < 1 ||
+                dot === -1 ||
+                dot < atSymbol + 2 ||
+                dot + 2 >= email.length
+            ) {
+                alert("Please enter valid email");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<nav class="heading"><a href="Index.html">The Common Clownfish</a></nav>
+<nav class="navigation">
+    <ul>
+        <li class="list"><a href="Introduction.html">Introduction</a></li>
+        <li class="list"><a href="History.html"> History</a></li>
+        <li class="list"><a href="Anatomy.html">Anatomy</a></li>
+        <li class="list"><a href="Appearance.html">Appearance</a></li>
+        <li class="list"><a href="Habitat.html">Habitat</a></li>
+        <li class="list"><a href="behavior.html">Behavior</a></li>
+        <li class="list"><a href="Diet.html">Diet</a></li>
+        <li class="list"><a href="Conservation.html">Conservation</a></li>
+        <li class="list"><a href="contact_us.html">Contact Us</a></li>
+        <li class="list"><a href="Honesty_statement.html">Copyright</a></li>
+    </ul>
+</nav>
+
+<div class="div_form">
+    <form id="myForm" action="https://formspree.io/f/myyrbkvr" method="POST" onsubmit="return validateForm();">
+        <table>
+            <h3>Contact us Form</h3>
+            <tr>
+                <td><label>First name:<span style="color: red;">*</span></label></td>
+                <td><input type="text" class="input" placeholder="First name" name="Firstname" id="Firstname"></td>
+            </tr>
+            <tr>
+                <td><label>Last name:<span style="color: red;">*</span></label></td>
+                <td><input type="text" class="input" placeholder="Last name" name="Lastname" id="Lastname"></td>
+            </tr>
+            <tr>
+                <td><label>Email Address:<span style="color: red;">*</span></label></td>
+                <td><input type="email" class="input" placeholder="Email" name="Email" id="Email"></td>
+            </tr>
+            <tr>
+                <td><label>Date:<span style="color: red;">*</span></label></td>
+                <td><input type="text" id="inputDate" class="input" name="date" placeholder="dd/mm/yy"></td>
+            </tr>
+            <tr>
+                <td><label>Phone:<span style="color: red;">*</span></label></td>
+                <td><input type="tel" class="input" placeholder="Phone Details" name="phone" id="Phone"></td>
+            </tr>
+            <tr>
+                <td><label>Message:<span style="color: red;">*</span></label></td>
+                <td><textarea placeholder="Enter your message" id="Message" name="Message"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;"><input type="submit" value="Submit" onclick="return validateEmail();"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div class="last">
+    <h3 style="text-align: center;">© 2024 The Common Clownfish</h3>
+    <h3 style="text-align: center;">References:</h3>
+    <p>Clown Anemonefish. (n.d.). [Video]. Animals.  <a href="https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish">https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish</a></p>
+    <p>Clownfish Identification Guide | Snorkeling Report. (2024, February 7). Snorkeling Report.  <a href="https://www.snorkeling-report.com/clownfish-species-identification/">https://rb.gy/zlc50i</a></p>
+    <p>Bali Dive Cove - Everything you need to know about clownfish. (n.d.). <a href="https://www.balidivecove.com/blogs/everything-you-need-to-know-about-clownfish/">https://rb.gy/q6o42v</a></p>
+    <p>BBC Earth. (2017, November 10). Incredible teamwork from Little Clownfish | Blue Planet II [Video]. YouTube. <a href="https://www.youtube.com/watch?v=WWlDa7CA_5w ">https://rb.gy/dci4ba</a></p>
+</div>
+
+</body>
+</html>

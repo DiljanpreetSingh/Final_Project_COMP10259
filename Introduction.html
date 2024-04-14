@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sass/Introduction_style.css">
+    <link rel="stylesheet" type="text/css" href="css/Introduction.css">
+    <title>The Common Clownfish</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var slideshowInterval;
+            var images = [
+                "img/amphiprion-ocellaris.jpg",
+                "img/pic3.jpg",
+                "img/pic4.jpg",
+                "img/pic5.webp",
+                "img/pic6.jpg",
+                "img/pic7.jpg",
+                "img/pic8.jpg",
+                "img/pic9.jpg",
+                "img/pic10.jpg",
+                "img/pic11.jpg"
+            ];
+            var currentIndex = 0;
+
+            function changeImage() {
+                $('#slideshowImage').fadeOut(1000, function() {
+                    $(this).attr('src', images[currentIndex]).fadeIn(1000);
+                });
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            function startSlideshow() {
+                slideshowInterval = setInterval(changeImage, 3000);
+            }
+
+            function stopSlideshow() {
+                clearInterval(slideshowInterval);
+            }
+
+            startSlideshow();
+
+            $('#slideshowImage').click(function() {
+                if (slideshowInterval) {
+                    stopSlideshow();
+                    slideshowInterval = null;
+                } else {
+                    startSlideshow();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="heading"><a href="Index.html">The Common Clownfish </a></nav>
+    <nav class="navigation">
+        <ul>
+            <li class="list"><a href="Introduction.html">Introduction</a></li>
+            <li class="list"><a href="History.html"> History</a></li>
+            <li class="list"><a href="Anatomy.html">Anatomy</a></li>
+            <li class="list"><a href="Appearance.html">Appearance</a></li>
+            <li class="list"><a href="Habitat.html">Habitat</a></li>
+            <li class="list"><a href="behavior.html">Behavior</a></li>
+            <li class="list"><a href="Diet.html">Diet</a></li>
+            <li class="list"><a href="Conservation.html">Conservation</a></li>
+            <li class="list"><a href="contact_us.html">Contact Us</a></li>
+            <li class="list"><a href="Honesty_statement.html">Copyright</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>Introduction</h1>
+        <p>This remarkable relationship exists between this 4-inch (10-centimeter) fish and the anemone (pronounced uh-NEM-uh-NEE). Both parties gain from the collaboration, and the fish's close relationship is why it was given the name anemonefish.
+        </p>
+        <p>The clownfish is not frightened by the stinging tentacles of an anemone. Amidst the tentacles, it resides. </p>
+        <figure class="fig1"><img src="img/pic1.png" alt="Introduction to Clownfish"><figcaption style="text-align: center; font-style: italic;">Fig 1. Introduction to clownfish</figcaption></figure>
+       <p> The clown anemonefish is protected from predators by living among the anemone's tentacles; they dare not approach the stinging defense mechanism. Remaining food from the anemone's meals is also given to the anemonefish. Having the fish nearby also helps the anemone. The helpful fish eats parasites that cause problems for the anemone. Additionally, the anemonefish occasionally introduces food into its tentacles for the anemone to consume. One host anemonefish typically becomes the home of several anemonefish.
+        </p>
+        <p>Exploring the wide variety of clownfish species is fascinating. Each species has unique colors and markings, ranging from the well-known Ocellaris and Orange Clownfish to the eye-catching Spinecheek and Saddleback types. Because of their vivid beauty and fascinating behavior, these fascinating creatures never cease to captivate marine enthusiasts around the globe.
+        </p>
+    </article>
+
+    <article>
+        <h1>Clownfish Gallery</h1>
+        <div class="gallery">
+            <img id="slideshowImage" src="img/amphiprion-ocellaris.jpg" alt="Clownfish Image" >
+        </div>
+    </article>
+    
+    <div class="last">
+        <h3 style="text-align: center;">© 2024 The Common Clownfish</h3>
+        <h3 style="text-align: center;">References:</h3>
+        <p>Clown Anemonefish. (n.d.). [Video]. Animals.  <a href="https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish">https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish</a></p>
+        <p>Clownfish Identification Guide | Snorkeling Report. (2024, February 7). Snorkeling Report.  <a href="https://www.snorkeling-report.com/clownfish-species-identification/">https://rb.gy/zlc50i</a></p>
+        <p>Bali Dive Cove - Everything you need to know about clownfish. (n.d.). <a href="https://www.balidivecove.com/blogs/everything-you-need-to-know-about-clownfish/">https://rb.gy/q6o42v</a></p>
+        <p>BBC Earth. (2017, November 10). Incredible teamwork from Little Clownfish | Blue Planet II [Video]. YouTube. <a href=https://www.youtube.com/watch?v=WWlDa7CA_5w ">https://rb.gy/dci4ba</a></p>
+    </div>
+</body>
+</html>

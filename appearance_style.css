@@ -1,0 +1,21 @@
+.navigation {
+  background-color: rgb(243, 211, 171);
+}
+
+.list a {
+  color: yellow;
+}
+
+.list a:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn_readmore {
+  background-color: red;
+  position: relative;
+}
+
+.btn_readmore::after {
+  text-transform: uppercase;
+}/*# sourceMappingURL=appearance_style.css.map */

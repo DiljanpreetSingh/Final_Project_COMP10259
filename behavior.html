@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sass/behavior_style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/behavior.css">
+    <title>The Common Clownfish</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var endOfPage = $(document).height() - $(window).height();
+                if ($(this).scrollTop() > endOfPage - 400) { 
+                    $('.navigation').addClass('fixed-nav'); 
+                } else {
+                    $('.navigation').removeClass('fixed-nav'); 
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="heading"><a href="Index.html">The Common Clownfish </a></nav>
+    <nav class="navigation">
+        <ul>
+            <li class="list"><a href="Introduction.html">Introduction</a></li>
+            <li class="list"><a href="History.html"> History</a></li>
+            <li class="list"><a href="Anatomy.html">Anatomy</a></li>
+            <li class="list"><a href="Appearance.html">Appearance</a></li>
+            <li class="list"><a href="Habitat.html">Habitat</a></li>
+            <li class="list"><a href="behavior.html">Behavior</a></li>
+            <li class="list"><a href="Diet.html">Diet</a></li>
+            <li class="list"><a href="Conservation.html">Conservation</a></li>
+            <li class="list"><a href="contact_us.html">Contact Us</a></li>
+            <li class="list"><a href="Honesty_statement.html">Copyright</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1>Behavior</h1>
+        <p>
+            Clownfish are fascinating to study in marine biology due to their intricate social structures and adaptive behaviors, in addition to their striking colors and special symbiotic relationship with anemones. Their existence serves as a reminder of the complex balance that exists within marine ecosystems and highlights the significance of each species in preserving the diversity and health of coral reefs.
+        </p>
+
+        <p>
+            Clownfish communities have a complex social structure with rigid roles that control social interactions and breeding. Clownfish exhibit a matriarchal system in which only the dominant female is permitted to reproduce, highlighting their ability to adapt to their surroundings. Sequential hermaphroditism is a phenomenon in which a male can change into a female after the dominant female dies. This phenomenon demonstrates an amazing biological adaptation to guarantee the survival and continuation of their group.
+            Clownfish protect their anemone homes from invaders because they have a strong sense of territoriality. Their reliance on anemones for protection and nutrition is demonstrated by this behavior, which also emphasizes the advantages of their symbiotic relationship for both parties. Because of the clownfish's movement, anemones benefit from having them as tenants as well, such as better water circulation around their tentacles and increased protection from predators.
+        </p>
+
+        <div class="video-container">
+            <video controls>
+                <source src="img/video_behavior.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        <p>
+            Complex mechanisms are involved in clownfish communication. Research is still being done on their capacity to communicate with each other through chemical, auditory, and visual cues, which demonstrates the complexity of their social relationships and interactions.
+            What's remarkable about clownfish is their parental concern. In fish, it is uncommon for both parents to care for their young, which emphasizes the evolutionary benefit of this behavior. Clownfish support the resilience and sustainability of their populations by making sure their young survive. 
+        </p>
+
+        
+        </div>
+    </article>
+    
+    <div class="last">
+        <h3 style="text-align: center;">© 2024 The Common Clownfish</h3>
+        <h3 style="text-align: center;">References:</h3>
+        <p>Clown Anemonefish. (n.d.). [Video]. Animals.  <a href="https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish">https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish</a></p>
+        <p>Clownfish Identification Guide | Snorkeling Report. (2024, February 7). Snorkeling Report.  <a href="https://www.snorkeling-report.com/clownfish-species-identification/">https://rb.gy/zlc50i</a></p>
+        <p>Bali Dive Cove - Everything you need to know about clownfish. (n.d.). <a href="https://www.balidivecove.com/blogs/everything-you-need-to-know-about-clownfish/">https://rb.gy/q6o42v</a></p>
+        <p>BBC Earth. (2017, November 10). Incredible teamwork from Little Clownfish | Blue Planet II [Video]. YouTube. <a href=https://www.youtube.com/watch?v=WWlDa7CA_5w ">https://rb.gy/dci4ba</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+$border: dashed;
+$navcolor: rgb(243, 211, 171);
+$hovercolor: white;
+$btncolor: red;
+$textcolor: yellow;
+$textcolor2: black;
+
+.navigation {
+    background-color: $navcolor;
+}
+
+.list a{
+    color: $textcolor;
+}
+
+.list a:hover {
+    background-color: $hovercolor;
+    color: $textcolor2;
+}
+
+.btn_readmore {
+    background-color: $btncolor;
+    position: relative;
+}
+
+.btn_readmore::after {
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background-color: $btncolor;
+    position: relative;
+}
+
+form {
+    margin: 5% auto; 
+    width: 50%; 
+    border: $border;
+}

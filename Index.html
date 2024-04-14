@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Common Clownfish</title>
+    <link rel="stylesheet" href="sass/Index_style.css">
+    <link rel="stylesheet" type="text/css" href="css/Assignment_Jaspreet_Diljanpreet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var endOfPage = $(document).height() - $(window).height();
+                if ($(this).scrollTop() > endOfPage - 400) { 
+                    $('.navigation').addClass('fixed-nav'); 
+                } else {
+                    $('.navigation').removeClass('fixed-nav'); 
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="heading"><a href="Index.html">The Common Clownfish</a></nav>
+    <nav class="navigation">
+        <ul>
+            <li class="list"><a href="Introduction.html">Introduction</a></li>
+            <li class="list"><a href="History.html">History</a></li>
+            <li class="list"><a href="Anatomy.html">Anatomy</a></li>
+            <li class="list"><a href="Appearance.html">Appearance</a></li>
+            <li class="list"><a href="Habitat.html">Habitat</a></li>
+            <li class="list"><a href="behavior.html">Behavior</a></li>
+            <li class="list"><a href="Diet.html">Diet</a></li>
+            <li class="list"><a href="Conservation.html">Conservation</a></li>
+            <li class="list"><a href="contact_us.html">Contact Us</a></li>
+            <li class="list"><a href="Honesty_statement.html">Copyright</a></li>
+        </ul>
+    </nav>
+    
+    <video autoplay muted loop>
+        <source src="img/Video.mp4">
+    </video>
+    
+    <div class="overlay">
+        Clownfish Chronicles: <br> Journey into <br>the Colorful Depths
+        <br><button class="btn_readmore"> <a href="Introduction.html">Read More</a></button>
+    </div>
+
+    <div class="last">
+        <h3 style="text-align: center;">© 2024 The Common Clownfish</h3>
+        <h3 style="text-align: center;">References:</h3>
+        <p>Clown Anemonefish. (n.d.). [Video]. Animals.  <a href="https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish">https://kids.nationalgeographic.com/animals/fish/facts/clown-anemonefish</a></p>
+        <p>Clownfish Identification Guide | Snorkeling Report. (2024, February 7). Snorkeling Report.  <a href="https://www.snorkeling-report.com/clownfish-species-identification/">https://rb.gy/zlc50i</a></p>
+        <p>Bali Dive Cove - Everything you need to know about clownfish. (n.d.). <a href="https://www.balidivecove.com/blogs/everything-you-need-to-know-about-clownfish/">https://rb.gy/q6o42v</a></p>
+        <p>BBC Earth. (2017, November 10). Incredible teamwork from Little Clownfish | Blue Planet II [Video]. YouTube. <a href="https://www.youtube.com/watch?v=WWlDa7CA_5w ">https://rb.gy/dci4ba</a></p>
+    </div>
+</body>
+</html>

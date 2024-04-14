@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:beige;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.heading {
+    background-color:bisque;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    height: 40px;
+    white-space: nowrap;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+nav a{
+    text-decoration: none;
+}
+
+.list {
+    margin-right: 1px;
+    width: 120%;
+}
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.list a {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease, margin 0.3s ease;
+    display: block;
+}
+
+.list a:hover {
+    border-radius: 5px;
+}
+
+.last {
+    background-color: rgba(0, 0, 0, 0.705);
+    color: white;
+    padding: 20px;
+    
+}
+ form{
+
+    background: white;
+    display:flex;
+    flex-direction: column;
+    margin:5vw 0 5vw 0;
+    padding: 30px;
+    width:60%;
+    max-width:600px;
+    border-radius:10px;
+ }
+.div_form{
+    height:100%;
+    width: 100%; 
+    background: rgb(88, 63, 225);
+    justify-content: center;
+    display:flex;
+    align-items: center;
+}
+input{
+    border:0;
+    margin:15px 0;
+    outline:none;
+    height:40px;
+    width:90%;
+    background-color: rgb(223, 238, 223);
+    border-radius: 4px;
+    font-size:16px;
+}
+
+textarea{border:0;
+    margin:15px 0;
+    outline:none;
+    height:80px;
+    width:90%;
+    background-color: rgb(223, 238, 223);
+    border-radius: 4px;
+    font-size:16px;
+}
+
+.input:focus, textarea:focus {
+    background-color: rgb(198, 211, 198); 
+}
+
+h3{color:gray;
+    font-weight:800;
+    margin-bottom:20px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding:20px;
+    color:white;
+    font-size:18px;
+    border:0;
+    outline:none;
+    text-align: center;
+    line-height: 1;
+    cursor:pointer;
+    width:50%;
+    margin:20px auto 0;
+    border-radius:30px; 
+}
